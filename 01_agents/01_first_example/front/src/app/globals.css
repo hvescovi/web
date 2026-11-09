@@ -1,0 +1,25 @@
+:root {
+  color-scheme: light;
+  --background: #f6f7fb;
+  --foreground: #202537;
+  --muted: #858b9d;
+  --line: #e9ebf1;
+  --accent: #6963dd;
+  --font-body: "DM Sans", "Segoe UI", Arial, sans-serif;
+  --font-heading: "Manrope", "DM Sans", "Segoe UI", Arial, sans-serif;
+}
+
+* { box-sizing: border-box; }
+
+html, body { min-height: 100%; }
+
+body {
+  margin: 0;
+  color: var(--foreground);
+  background: var(--background);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+}
+
+button, input, select { font: inherit; }
+button { cursor: pointer; }

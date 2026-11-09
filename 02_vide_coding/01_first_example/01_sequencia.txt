@@ -1,0 +1,61 @@
+A) CRIAÇÃO do backend
+---------------------
+
+1) entrar na pasta "back"
+2) dentro da pasta "back", observar o prompt de backend inicial
+3) esse prompt inicial foi enviado ao Claude, para análise
+4) executar no copilot o prompt revisado 
+pelo claude (arquivo 03 dentro da pasta "back")
+5) observar os arquivos sendo criados; eventualmente 
+é preciso dar permissão para o 
+copilot executar alguma ação
+
+B) CRIAÇÃO do frontend
+----------------------
+
+1) criar o projeto do react/next (npx create-next-app@latest)
+===> Usar o seguinte nome do projeto: "front"
+2) observar (LEIA!) o prompt do frontend (arquivo 02)
+3) executar o prompt do frontend no copilot do VSCode
+4) observar os arquivos sendo criados
+
+C) Configuração de variável de ambiente do backend
+--------------------------------------------------
+
+1) É preciso dispor de um servidor Postgres. Neste site é possível criar: https://supabase.com/
+
+2) criar o arquivo ".env" no backend com 
+informações de conexão ao Postgres:
+POSTGRES_URL_NON_POOLING="postgres://myuser:mypassword@localhost:5432/mydatabase"
+
+3) criar no servidor Postgres um banco de dados chamado "mydatabase"
+
+D) Execução do backend
+----------------------
+
+executar o backend com este comando: uv run python -m src.app
+
+E) Instalação e configuração do frontend
+----------------------------------------
+
+1) instalar as bibliotecas do frontend com este comando: npm install
+
+2) criar arquivo .env.local com variável de ambiente localizando o backend:
+
+NEXT_PUBLIC_API_URL=http://localhost:5000
+
+F) Criação das tabelas
+----------------------
+
+criar as tabelas acionando a rota com este comando: curl -X POST localhost:5000/criar-tabelas
+
+O resultado deverá ser este:
+
+{"detalhes":{"mensagem":"Tabelas criadas com sucesso."},"resultado":"ok"}
+
+G) Execução do frontend
+
+executar e acessar o frontend com este comando:
+
+npm run dev
+

@@ -1,0 +1,25 @@
+Você deverá criar um backend em python.
+1) use a biblioteca flask
+2) o banco de dados a ser usado é o Postgres
+3) use a biblioteca SQLAlchemy
+4) crie as classes persistentes:
+  a) Pessoa (nome, email, telefone)
+  b) Celular (número, modelo, marca, pessoa: Pessoa)
+5) uma variável de ambiente chamada POSTGRES_URL_NON_POOLING conterá a conexão do banco de dados
+6) esse backend será futuramente acessado por um frontend escrito em React/next
+7) crie um arquivo modelos.py para conter as classs
+8) crie um arquivo servicos.py para conter serviços
+9) crie um arquivo rotas.py para armazenar as rotas
+10) as 4 operações devem ser implementadas para cada classe: inserir, listar, excluir e editar
+11) a resposta de cada rota deve possuir duas partes: "resultado", informando "ok" ou "erro"; e "detalhes", informando o resultado da operação ou uma eventual mensagem de erro
+12) deve haver uma rota específica para criar as tabelas no banco de dados
+13) a arquitetura da aplicação é esta: as rotas usam serviços, e serviços usam as classes de modelo
+14) use a sintaxe mais moderna do SQLAlchemy
+15) o backend será hospedado no site Vercel
+16) será usado o gerenciador de pacotes "uv" para as bibliotecas
+17) deve ser criado um arquivo README.md mostrando como executar o backend localmente
+18) deve haver um arquivo de configurações separado, contendo importações de bibliotecas e configurações de flask e sqlalchemy
+19) não haverá controle de login
+20) os arquivos devem ficar dentro de uma pasta "src"
+21) o backend deve ler a variável de ambiente do Postgres de um arquivo .env
+22) crie um arquivo .gitignore apropriado

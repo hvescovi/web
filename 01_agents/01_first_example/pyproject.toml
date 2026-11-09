@@ -1,0 +1,21 @@
+[project]
+name = "cadastro-pessoas-celulares"
+version = "0.1.0"
+description = "API para cadastro de pessoas e celulares"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "flask>=3.0,<4.0",
+    "flask-cors>=4.0,<6.0",
+    "psycopg[binary]>=3.2,<4.0",
+    "python-dotenv>=1.0,<2.0",
+    "sqlalchemy>=2.0,<3.0",
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=8.0,<9.0",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
